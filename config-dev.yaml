@@ -1,0 +1,37 @@
+app_name: "xx"
+port: XXX   # 服务运行端口号
+start_time: "xxxx-xx-xx" # 雪花算法启始时间
+machine_id: 1 # 雪花算法 机器 id
+registration_switch: false # 是否开启用户注册功能
+yiyan_sync_mysql_to_redis: false # 是否重新同步mysql中的一言数据到redis
+yiyan_read_to_redis: true        # 从redis读取一言
+
+
+file:
+  mdfile_path: "/path/GoBlog/uploads"     # 配置存放markdown文件目录
+  image_path: "/path/GoBlog/images/"      # 配置存放图片文件目录
+  ct_url: "http://url/api/v1/look_images/"# 配置图片访问地址，为url:端口/api/v1/look/images
+
+log:
+  mode: "terminal"  # terminal 输出到终端，file 输出到文件, all 输出到终端和文件
+  lever: "debug"
+  filename: "xx.log"
+  max_size: xx
+  max_age: xx
+  max_backup: xx
+
+mysql:
+  host: "xxx.xxx.xxx.xxx"
+  port: xxxx
+  user: "x"
+  password: "xxx"
+  dbname: "xxxx"
+  max_conns: xx
+  max_idle_conns: xx
+
+redis:
+  host: "xxx.xxx.xxx.xxx"
+  port: xxxx
+  password: "xx"
+  poolsize: xx
+  db: x
