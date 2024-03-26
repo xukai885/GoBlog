@@ -8,8 +8,8 @@ WORKDIR /build
 COPY go.mod .
 RUN go mod download
 COPY . .
-
 RUN go build -o app .
+# 打包
 FROM scratch
 COPY --from=builder /build/app /
 # 声明服务端口
