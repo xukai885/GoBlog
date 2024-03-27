@@ -21,5 +21,8 @@ openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 ```shell
 config-dev.yaml #服务会根据APP_ENV指定变量读取相应的配置文件config-?.yaml;
 ```
-
+#### 容器启动
+```shell
+docker run -itd -p9092:9092 --name=goblog -v /boke_web/uploads/:/uploads -v/boke_web/rsa_private_key.pem:/rsa_private_key.pem -v /boke_web/rsa_public_key.pem:/rsa_public_key.pem -v /boke_web/config-prod.yaml:/config-prod.yaml -eAPP_ENV=prod repository/image:tag
+```
 
