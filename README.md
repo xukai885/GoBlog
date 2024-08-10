@@ -30,3 +30,6 @@ docker run -itd -p9092:9092 --name=goblog -v /boke_web/uploads/:/uploads -v/boke
 ```
 #### 前端
 [GoBlog-Web](https://github.com/xukai885/GoBlog-Web)
+
+#### 站点
+[徐同学的博客](https://blog.xwnlearn.cn)
