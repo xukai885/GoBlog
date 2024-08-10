@@ -1,8 +1,11 @@
 ## 服务启动配置
-#### 数据库准备
+#### 准备
 ```shell
-mysql:5.7
-redis:6.0.6
+## 版本
+Go 1.20.4 
+Node.js v20.9.0
+Mysql 5.7
+Redis 6.0.6
 ```
 #### 初始化数据库
 ```shell
@@ -25,4 +28,5 @@ config-dev.yaml #服务会根据APP_ENV指定变量读取相应的配置文件co
 ```shell
 docker run -itd -p9092:9092 --name=goblog -v /boke_web/uploads/:/uploads -v/boke_web/rsa_private_key.pem:/rsa_private_key.pem -v /boke_web/rsa_public_key.pem:/rsa_public_key.pem -v /boke_web/config-prod.yaml:/config-prod.yaml -eAPP_ENV=prod repository/image:tag
 ```
-
+#### 前端
+[GoBlog-Web](https://github.com/xukai885/GoBlog-Web)
