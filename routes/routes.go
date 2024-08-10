@@ -54,6 +54,7 @@ func SetUp() *gin.Engine {
 	v1.GET("/getTimeArchiveInfo/:param1/:param2", controllers.GetTimeArchiveInfo) // 获取时间归档-详情
 	v1.GET("/look_images/:param1", controllers.LookImages)                        // 获取图片-展示
 	v1.GET("/share", controllers.GetShare)                                        // 获取分享的信息
+	v1.GET("/about", controllers.About)                                           // 关于
 	v1.Use(middlewares.JWTAuthMiddleware())                                       // 应用jwt认证中间件
 	{
 		v1.GET("/ping", controllers.Ping)
